@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="28px" viewBox="0 0 64 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Card_Icon_read" fill="#FF3934">
+            <path d="M10.8392199,0 L59.9998912,0 C62.2090302,3.51840692e-15 63.9998912,1.790861 63.9998912,4 L63.9998912,24 C63.9998912,26.209139 62.2090302,28 59.9998912,28 L4,28 C1.790861,28 2.705415e-16,26.209139 0,24 C-5.39240618e-17,23.5596766 0.0727034221,23.1223746 0.215176864,22.7057381 L7.05439677,2.70573811 C7.60779931,1.08741744 9.12889357,1.20236027e-15 10.8392199,8.8817842e-16 Z" id="Rectangle-4"></path>
+        </g>
+    </g>
+</svg>
