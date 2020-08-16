@@ -9,6 +9,7 @@ function resolve(dir) {
 module.exports = {
   settings: {
     enableEslint: true, // 调试模式是否开启ESLint，默认开启ESLint检测代码格式
+    enableEslintFix: false, // 是否自动修正代码格式，默认不自动修正
   },
   webpack: {
     entry: {
@@ -67,19 +68,11 @@ module.exports = {
     assetsPublicPath: '/', // 设置静态资源的引用路径（根域名+路径）
     assetsSubDirectory: '',
     hostname: 'localhost',
-    proxyTable: {
-      '/apiTest': {
-        target: 'http://api-test.com.cn', // 不支持跨域的接口根地址
-        ws: true,
-        changeOrigin: true,
-      },
-    },
     cssSourceMap: false,
   },
   build: {
     // 用于构建生产环境代码的相关配置信息
     NODE_ENV: 'production',
-    index: 'index.html',
     assetsRoot: resolve('./dist'), // 打包后的文件绝对路径（物理路径）
     assetsPublicPath: '/', // 设置静态资源的引用路径（根域名+路径）
     assetsSubDirectory: '', // 资源引用二级路径
