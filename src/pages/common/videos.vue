@@ -222,8 +222,8 @@ export default {
   .item-imgbox .video-runtime {
     position: absolute;
     z-index: 2;
-    right: 0; // px2rem(16);
-    bottom: 0; // px2rem(12);
+    right: 0;
+    bottom: 0;
     padding: px2rem(6) px2rem(8);
     color: #fff;
     min-width: px2rem(60);

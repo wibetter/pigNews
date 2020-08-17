@@ -1,7 +1,7 @@
 <template>
   <div class="photos-page clearfix">
     <div class="newsList" id="newsBox">
-      <template v-for="(item) in newsList">
+      <template v-for="item in newsList">
         <div class="news-item" :key="item.uuid">
           <div class="news-title">{{ item.title }}</div>
           <div class="item-imgbox">
@@ -215,8 +215,8 @@ export default {
 
   .item-imgbox .img-count {
     position: absolute;
-    top: 0; // px2rem(6);
-    right: 0; //px2rem(6);
+    top: 0;
+    right: 0;
     padding: px2rem(6) px2rem(8);
     color: #fff;
     min-width: px2rem(60);

@@ -274,11 +274,9 @@ export default {
 $background: #f5f5f5;
 
 .better-scroll-root {
-  // background-color: $background;
   height: 100%;
 
   .content-bg {
-    // background-color: $background;
     min-height: calc(100% + 1px);
   }
 

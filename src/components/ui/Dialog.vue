@@ -63,7 +63,7 @@ export default {
   .ss-dialog-close {
     width: 1rem;
     height: 0.8rem;
-    // background: #ddd;
+    /* background: #ddd; */
   }
 }
 </style>

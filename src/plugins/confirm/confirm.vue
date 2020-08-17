@@ -68,10 +68,7 @@ export default {
   .box {
     position: absolute;
     top: px2rem(300);
-    // left: 0;
-    // right: 0;
     width: px2rem(480);
-    // margin: auto;
     font-family: PingFangSC-Medium;
     background-color: #fff;
     border-radius: px2rem(25);

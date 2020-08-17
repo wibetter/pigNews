@@ -406,8 +406,6 @@ div {
   contain: strict;
   height: px2rem(66);
   line-height: px2rem(66);
-  //height: 2em;
-  //line-height: 2em;
   font-family: PingFangSC-Regular;
   font-size: px2rem(34);
   color: #828282;
@@ -415,7 +413,6 @@ div {
 }
 
 .smooth-picker .smooth-item.smooth-item-selected {
-  // transform: scale(1.5) !important;
   font-family: PingFangSC-Regular;
   font-size: px2rem(34);
   color: #1e1e1e;
@@ -423,8 +420,6 @@ div {
   text-align: center;
   height: px2rem(66);
   line-height: px2rem(66);
-  //height: 2em;
-  //line-height: 2em;
 }
 
 .smooth-picker .smooth-handle-layer {
