@@ -12,5 +12,8 @@ Vue/Vue-Router/Vuex
 ### 在线预览
 [点击在线预览](https://wibetter.github.io/pigNews/)
 
+### 扫码预览
+![image](https://user-images.githubusercontent.com/11958920/115360655-67c42f00-a1f2-11eb-9df8-08a199f532e9.png)
+
 ## 特别提醒
 本程序使用的数据接口是从新浪新闻H5页中抓取的相关数据接口，主要用于填充页面的模型数据，仅供学习使用，请勿用于商业用途。
