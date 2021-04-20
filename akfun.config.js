@@ -51,15 +51,15 @@ module.exports = {
     },
     local: {
       // 本地开发环境
-      '#dataApiBase#': 'http://localhost:1024', // 数据接口根地址
-      '#assetsPublicPath#': 'http://localhost:1024', // 静态资源根地址
+      '#dataApiBase#': '/', // 数据接口根地址
+      '#assetsPublicPath#': '', // 静态资源根地址
       '#routeBasePath#': '/', // 路由根地址
     },
     online: {
       // 线上正式环境配置参数
       '#dataApiBase#': '/', // 数据接口根地址 "//goodtool666.cn/"格式
-      '#assetsPublicPath#': '', // 静态资源根地址 "//goodtool666.cn/_spa/sportNews"格式
-      '#routeBasePath#': '/', // 路由根地址 "/_spa/sportNews/"格式
+      '#assetsPublicPath#': '/pigNews/dist/', // 静态资源根地址 "//goodtool666.cn/_spa/sportNews"格式
+      '#routeBasePath#': '/pigNews/dist/', // 路由根地址 "/_spa/sportNews/"格式
     },
   },
   dev: {
@@ -76,7 +76,7 @@ module.exports = {
     // 用于构建生产环境代码的相关配置信息
     NODE_ENV: 'production',
     assetsRoot: resolve('./dist'), // 打包后的文件绝对路径（物理路径）
-    assetsPublicPath: '/', // 设置静态资源的引用路径（根域名+路径）
+    assetsPublicPath: '/pigNews/dist/', // 设置静态资源的引用路径（根域名+路径）
     assetsSubDirectory: '', // 资源引用二级路径
     productionSourceMap: false,
     productionGzip: false,
