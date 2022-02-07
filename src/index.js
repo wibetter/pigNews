@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import router from '$router/index';
-import App from './App';
 import store from '$store/index';
 import jumpPageMixin from '$utils/jumpPageMixin';
+import App from './App';
 
 /* 引入公共的静态资源 */
 import '$public/css/base.css';
