@@ -42,6 +42,7 @@ module.exports = {
       resolve('./src/assets/css/common.scss'),
       resolve('./src/assets/css/mixin.scss'),
     ],
+    cssLoaderUrl: false, // 不处理css的url路径
   },
   // envParams：项目系统环境变量(根据执行命令中的环境变量批量替换项目源码中的相关参数)
   envParams: {
