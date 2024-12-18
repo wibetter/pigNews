@@ -8,7 +8,7 @@ function resolve(dir) {
 // 包括生产和开发的环境配置信息
 module.exports = {
   settings: {
-    enableESLint: true, // 调试模式是否开启ESLint，默认开启ESLint检测代码格式
+    enableESLint: false, // 调试模式是否开启ESLint，默认开启ESLint检测代码格式
     enableESLintFix: false, // 是否自动修正代码格式，默认不自动修正
     enableStyleLint: false, // 是否开启StyleLint，默认开启ESLint检测代码格式
     enableStyleLintFix: false // 是否需要StyleLint自动修正代码格式
@@ -42,6 +42,7 @@ module.exports = {
       resolve('./src/assets/css/common.scss'),
       resolve('./src/assets/css/mixin.scss'),
     ],
+    cssLoaderUrl: false, // 不处理css的url路径
   },
   // envParams：项目系统环境变量(根据执行命令中的环境变量批量替换项目源码中的相关参数)
   envParams: {
@@ -60,7 +61,7 @@ module.exports = {
       '#dataApiBase#': '/', // 数据接口根地址 "//goodtool666.cn/"格式
       '#assetsPublicPath#': '/pigNews/dist/', // 静态资源根地址 "//goodtool666.cn/_spa/sportNews"格式
       '#routeBasePath#': '/pigNews/dist/', // 路由根地址 "/_spa/sportNews/"格式
-    },
+    }
   },
   dev: {
     // 用于开启本地调试模式的相关配置信息
@@ -70,7 +71,7 @@ module.exports = {
     assetsPublicPath: '/', // 设置静态资源的引用路径（根域名+路径）
     assetsSubDirectory: '',
     hostname: 'localhost',
-    cssSourceMap: false,
+    cssSourceMap: false
   },
   build: {
     // 用于构建生产环境代码的相关配置信息

@@ -1,33 +1,39 @@
 <template>
   <div class="videos-page clearfix">
     <div class="newsList" id="newsBox">
-      <template v-for="item in newsList">
-        <div class="news-item" :key="item.docID">
-          <div class="news-title">{{ item.title }}</div>
-          <div class="item-imgbox">
-            <div
-              class="news-img"
-              :style="{ backgroundImage: 'url(' + item.imgurl + ')' }"
-            ></div>
-            <div v-if="item.runtime" class="video-runtime">
-              {{ item.runtime }}
-            </div>
-            <img
-              class="video-player"
-              src="#assetsPublicPath#/img/ico-video.png"
-            />
+      <component
+        v-bind:is="test"
+        :params="{
+          ch: '2',
+          cid: 'k', // NBA
+        }"
+        :dataApi="APIList.photosData"
+      ></component>
+      <div class="news-item" v-for="item in newsList" :key="item.docID">
+        <div class="news-title">{{ item.title }}</div>
+        <div class="item-imgbox">
+          <div
+            class="news-img"
+            :style="{ backgroundImage: 'url(' + item.imgurl + ')' }"
+          ></div>
+          <div v-if="item.runtime" class="video-runtime">
+            {{ item.runtime }}
           </div>
-          <div class="news-info">
-            <div class="left media-mark">{{ item.source || '小猪新闻' }}</div>
-            <div
-              v-if="item.playCount && item.playCount != 0"
-              class="cmt-num right"
-            >
-              {{ agreeDataFormat(item.playCount) }}次播放
-            </div>
+          <img
+            class="video-player"
+            src="#assetsPublicPath#/img/ico-video.png"
+          />
+        </div>
+        <div class="news-info">
+          <div class="left media-mark">{{ item.source || '小猪新闻' }}</div>
+          <div
+            v-if="item.playCount && item.playCount != 0"
+            class="cmt-num right"
+          >
+            {{ agreeDataFormat(item.playCount) }}次播放
           </div>
         </div>
-      </template>
+      </div>
       <div class="loadRecommend" v-if="isLoad">
         <img
           class="loadding-img"
@@ -44,6 +50,17 @@
 <script>
 import FooterView from '$components/index/footerView';
 import scrollToBottom from '$utils/scrollToBottom';
+import NBAPhotos from '$pages/photo/NBA';
+const jxPhotos = () => import('$pages/photo/jx');
+const CBAPhotos = () => import('$pages/photo/CBA');
+/* 引进项目配置文件 */
+import APIList from '$config/APIList';
+
+const components = {
+  NBAPhotos,
+  jxPhotos,
+  CBAPhotos,
+};
 
 /**
  * 视频模板页
@@ -68,10 +85,13 @@ export default {
       isFirstVisit: true,
       page: 1,
       page_size: 10,
+      APIList,
+      test: 'NBAPhotos',
     };
   },
   components: {
     FooterView,
+    ...components,
   },
   created() {
     this.getNews();

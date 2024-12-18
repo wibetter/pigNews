@@ -10,7 +10,7 @@ const NewsPage = () => import('$pages/news');
 const NewVideos = () => import('$pages/video/New');
 const NBAVideos = () => import('$pages/video/NBA');
 const FootballVideos = () => import('$pages/video/Football');
-// 各类高清视频
+// 各类高清图片集
 const jxPhotos = () => import('$pages/photo/jx');
 const NBAPhotos = () => import('$pages/photo/NBA');
 const CBAPhotos = () => import('$pages/photo/CBA');

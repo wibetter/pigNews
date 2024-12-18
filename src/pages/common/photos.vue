@@ -1,29 +1,27 @@
 <template>
   <div class="photos-page clearfix">
     <div class="newsList" id="newsBox">
-      <template v-for="item in newsList">
-        <div class="news-item" :key="item.uuid">
-          <div class="news-title">{{ item.title }}</div>
-          <div class="item-imgbox">
-            <div
-              class="news-img"
-              :style="{ backgroundImage: 'url(' + item.thumb + ')' }"
-            ></div>
-            <div v-if="item.img_count > 0" class="img-count">
-              {{ item.img_count }}
-            </div>
-          </div>
-          <div class="news-info">
-            <div class="left media-mark">{{ '小猪新闻' }}</div>
-            <div
-              v-if="item.comment_count_show && item.comment_count_show != 0"
-              class="cmt-num right"
-            >
-              {{ agreeDataFormat(item.comment_count_show) }}评
-            </div>
+      <div class="news-item" v-for="item in newsList" :key="item.uuid">
+        <div class="news-title">{{ item.title }}</div>
+        <div class="item-imgbox">
+          <div
+            class="news-img"
+            :style="{ backgroundImage: 'url(' + item.thumb + ')' }"
+          ></div>
+          <div v-if="item.img_count > 0" class="img-count">
+            {{ item.img_count }}
           </div>
         </div>
-      </template>
+        <div class="news-info">
+          <div class="left media-mark">{{ '小猪新闻' }}</div>
+          <div
+            v-if="item.comment_count_show && item.comment_count_show != 0"
+            class="cmt-num right"
+          >
+            {{ agreeDataFormat(item.comment_count_show) }}评
+          </div>
+        </div>
+      </div>
       <div class="loadRecommend" v-if="isLoad">
         <img
           class="loadding-img"
